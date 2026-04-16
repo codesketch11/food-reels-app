@@ -92,7 +92,7 @@ git clone https://github.com/codesketch11/food-reels-app.git
 ### 2. Backend setup
 
 ```
-cd backend
+cd Backend
 npm install
 ```
 
@@ -115,7 +115,7 @@ npm run dev
 ### 3. Frontend setup
 
 ```
-cd frontend
+cd Frontend
 npm install
 npm run dev
 ```

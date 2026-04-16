@@ -13,10 +13,6 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-app.get("/", (req, res)=>{
-    res.send("Hellooooo")
-})
-
 app.use('/api/auth', authRoutes);
 app.use('/api/food', foodRoutes);
 app.use('/api/food-partner', foodPartnerRoutes)
