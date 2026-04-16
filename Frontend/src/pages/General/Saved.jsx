@@ -11,7 +11,7 @@ const Saved = () => {
   useEffect(() => {
     const fetchSaved = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.API_URL}/api/food/saved`, {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/food/saved`, {
           withCredentials: true,
         });
 

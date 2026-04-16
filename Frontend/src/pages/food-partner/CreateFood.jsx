@@ -37,7 +37,7 @@ const CreateFood = () => {
     formDataToSend.append('video', formData.video);
 
     try {
-      const response = await axios.post(`${import.meta.env.API_URL}/api/food/`, formDataToSend, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/food/`, formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
