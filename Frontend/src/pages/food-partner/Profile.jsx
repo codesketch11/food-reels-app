@@ -8,7 +8,8 @@ import { LogOut } from 'lucide-react';
 const Profile = () => {
   const navigate = useNavigate();
 
-  const storedProfile = JSON.parse(localStorage.getItem("foodPartnerProfile"));
+  const stored = localStorage.getItem("foodPartnerProfile");
+  const storedProfile = stored ? JSON.parse(stored) : null;
 
 
   const handleLogout = async () => {
@@ -37,9 +38,8 @@ const Profile = () => {
   const [videos, setVideos] = useState([])
 
   useEffect(() => {
-    const storedProfile = localStorage.getItem("foodPartnerProfile");
     if (storedProfile) {
-      setProfile(JSON.parse(storedProfile));
+      setProfile(storedProfile);
     }
   }, []);
 
