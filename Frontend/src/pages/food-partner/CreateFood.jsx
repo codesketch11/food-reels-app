@@ -56,7 +56,14 @@ const CreateFood = () => {
       alert('Failed to create food item. Please try again.');
     }
 
-    const storedProfile = JSON.parse(localStorage.getItem("foodPartnerProfile"));
+    const stored = localStorage.getItem("foodPartnerProfile");
+    const storedProfile = stored ? JSON.parse(stored) : null;
+
+    if (!storedProfile?._id) {
+      alert("Session expired. Please login again.");
+      navigate("/food-partner/login");
+      return;
+    }
     navigate(`/food-partner/profile/${storedProfile._id}`);
   };
 
