@@ -13,7 +13,7 @@ const Profile = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3000/api/auth/food-partner/logout", {
+      await axios.get(`${import.meta.env.API_URL}/api/auth/food-partner/logout`, {
         withCredentials: true,
       });
 
@@ -51,7 +51,7 @@ const Profile = () => {
 
     setLoading(true);
     axios
-      .get(`http://localhost:3000/api/food-partner/${id}`, { withCredentials: true })
+      .get(`${import.meta.env.API_URL}/api/food-partner/${id}`, { withCredentials: true })
       .then((response) => {
         if (response.data?.foodPartner) {
           setProfile(response.data.foodPartner);

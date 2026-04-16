@@ -14,7 +14,7 @@ const Home = () => {
 
   const handleUserLogout = async () => {
     try {
-      await axios.get("http://localhost:3000/api/auth/user/logout", {
+      await axios.get(`${import.meta.env.API_URL}/api/auth/user/logout`, {
         withCredentials: true,
       });
 
@@ -29,7 +29,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const feedResponse = await axios.get("http://localhost:3000/api/food/", {
+        const feedResponse = await axios.get(`${import.meta.env.API_URL}/api/food/`, {
           withCredentials: true,
         });
 
@@ -47,7 +47,7 @@ const Home = () => {
         setReels(mapped);
 
         try {
-          const savedResponse = await axios.get("http://localhost:3000/api/food/saved", {
+          const savedResponse = await axios.get(`${import.meta.env.API_URL}/api/food/saved`, {
             withCredentials: true,
           });
           const savedFoods = savedResponse.data.savedFoods || [];
@@ -73,7 +73,7 @@ const Home = () => {
   const handleLike = async (foodId) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/food/like",
+        `${import.meta.env.API_URL}/api/food/like`,
         { foodId },
         { withCredentials: true }
       );
@@ -96,7 +96,7 @@ const Home = () => {
   const handleSave = async (foodId) => {
     try {
       await axios.post(
-        "http://localhost:3000/api/food/save",
+        `${import.meta.env.API_URL}/api/food/save`,
         { foodId },
         { withCredentials: true }
       );
