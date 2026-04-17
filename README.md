@@ -1,9 +1,53 @@
-# 🍔 Food Reels Platform (MERN)
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node](https://img.shields.io/badge/Backend-Node.js-green)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
 
-A full-stack food reels application inspired by Instagram Reels, where users can explore, like, and save food videos, and food partners can upload and manage their own content.
+# 🍔 Food Reels Platform (MERN)
+A full-stack MERN application inspired by Instagram Reels, featuring a video-first experience where users explore food content and creators upload short-form reels.
+
+Designed with a mobile-first UI and deployed end-to-end with authentication, media uploads, and role-based access.
 
 ---
+## 🌐 Live Demo
+👉 Best viewed in mobile screen (mobile-first design)
 
+- 🔗 Frontend: https://food-reels-app-1-frontend.onrender.com  
+- 🔗 Backend API: https://food-reels-app-1-backend.onrender.com
+
+---
+## 📸 App Preview
+
+### 🏠 Welcome
+<p align="center">
+  <img src="Frontend/screenshots/Welcome.png" width="300"/>
+</p>
+
+### 🔐 User Login
+<p align="center">
+  <img src="Frontend/screenshots/UserLogin.png" width="300"/>
+</p>
+
+### 🎥 Reels Feed
+<p align="center">
+  <img src="Frontend/screenshots/Reels1.png" width="300"/>
+</p>
+
+### 📌 Saved Meals
+<p align="center">
+  <img src="Frontend/screenshots/SavedReels.png" width="300"/>
+</p>
+
+### 👨‍🍳 Food Partner Profile
+<p align="center">
+  <img src="Frontend/screenshots/FoodPartnerProfile2.png" width="300"/>
+</p>
+
+### ➕ Create Food Item
+<p align="center">
+  <img src="Frontend/screenshots/CreateFood.png" width="300"/>
+</p>
+
+---
 ## 🚀 Features
 
 ### 👤 User
@@ -38,7 +82,7 @@ A full-stack food reels application inspired by Instagram Reels, where users can
 
 * Node.js
 * Express.js
-* MongoDB + Mongoose
+* MongoDB Atlas + Mongoose
 * JWT Authentication
 * Cookie-based auth (httpOnly)
 
@@ -50,6 +94,14 @@ A full-stack food reels application inspired by Instagram Reels, where users can
 * Role-based access (User vs Food Partner)
 * Protected routes for content creation
 * Secure API calls using `withCredentials`
+
+---
+
+## 🚀 Deployment
+
+- Frontend deployed on Render (Static Site)
+- Backend deployed on Render (Web Service)
+- MongoDB Atlas used as cloud database
 
 ---
 
@@ -119,38 +171,23 @@ cd Frontend
 npm install
 npm run dev
 ```
-
----
-
-## 🌐 API Endpoints (sample)
-
-* `POST /api/auth/user/login`
-* `POST /api/auth/food-partner/login`
-* `GET /api/food`
-* `POST /api/food`
-* `GET /api/food-partner/:id`
-
----
-
-## 📸 Screens & Flow
-
-* User login → reels feed
-* Like & Save functionality
-* Saved items page
-* Food partner profile
-* Create food item (video upload)
-
 ---
 
 ## 🎯 Key Highlights
 
-* Full end-to-end application (frontend + backend)
-* Role-based system (User vs Creator)
-* Video-first UI experience
-* Clean routing and protected flows
+* Fully deployed full-stack application (frontend + backend)
+* Role-based authentication system (User vs Food Partner)
+* Video upload & media handling using multipart/form-data
+* Mobile-first UI with reel-style interaction
+* RESTful API design with protected routes
 
 ---
 
 ## 🙌 Author
 
-Built with focus on real-world product thinking and scalable architecture.
+Built by **Tushar Kamble**
+
+- GitHub: https://github.com/codesketch11
+- LinkedIn: https://www.linkedin.com/in/tushar-kamble-78ba71283
+
+Focused on building real-world scalable full-stack applications.

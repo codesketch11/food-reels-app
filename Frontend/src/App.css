@@ -379,6 +379,7 @@ button {
   background: rgba(5, 10, 20, 0.82);
   backdrop-filter: blur(18px);
   z-index: 5;
+  overflow: hidden;
 }
 
 .nav-button {
